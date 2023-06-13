@@ -1,0 +1,138 @@
+﻿/* Apply common styles to the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lawngreen;
+    /*background: url('skyrim_background.jpg') repeat; */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the fixed home bar */
+.homebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    z-index: 0;
+}
+
+/* Styling for the sidebars */
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+}
+
+/* Styling for the top and bottom images in the sidebars */
+.sidebar-top,
+.sidebar-bottom {
+    height: 20px; /* Adjust the height as needed */
+    background-size: cover;
+    position: static;
+}
+
+.sidebar-top {
+    background-image: url('sidebar_top.png');
+    position: fixed;
+}
+
+.sidebar-bottom {
+    background-image: url('sidebar_bottom.png');
+    position: fixed;
+}
+
+/* Styling for the image filling between top and bottom images */
+.sidebar-fill {
+    background-image: url('sidebar_fill.png');
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: calc(100% - 40px); /* Adjust the height to accommodate top and bottom image heights */
+    position: static;
+}
+
+/* Styling for the main content section */
+.content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    margin-top: 60px;
+}
+/* TEST INCOMING /!\ */
+.corner-decoration {
+    position: absolute;
+    width: 3em;
+    margin: -3px;
+}
+
+.corner-decoration-bottom {
+    position: fixed;
+    z-index: 3;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .corner-decoration {
+        width: 3.5em;
+        margin: -4px;
+    }
+}
+
+@media (min-width: 992px) {
+    .corner-decoration {
+        width: 4em;
+        margin: -5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .corner-decoration {
+        width: 5em;
+        margin: -6px;
+    }
+}
+
+.corner-decoration.corner-left-top {
+    z-index: 3;
+    left: 0;
+    top: 0;
+}
+
+.corner-decoration.corner-right-top {
+    z-index: 3;
+    top: 0;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.corner-decoration.corner-right-bottom {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
+}
+
+.corner-decoration.corner-left-bottom {
+    left: 0;
+    bottom: 0;
+}
+
